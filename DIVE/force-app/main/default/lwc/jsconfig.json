@@ -1,7 +1,14 @@
 {
     "compilerOptions": {
         "baseUrl": ".",
-        "paths": {},
+        "paths": {
+            "c/diveDashboard": [
+                "diveDashboard/diveDashboard.js"
+            ],
+            "c/diveProfile": [
+                "diveProfile/diveProfile.js"
+            ]
+        },
         "experimentalDecorators": true
     },
     "include": [
