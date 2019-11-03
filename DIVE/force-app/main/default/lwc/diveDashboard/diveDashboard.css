@@ -1,0 +1,31 @@
+.main-container {
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%; 
+    width:100%;
+    background-color: red;
+    border-radius: 5px;	
+    vertical-align:middle;
+    text-align:left;   
+    display: table-cell;
+}
+
+.inner-container {
+    background-color: blue;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    backface-visibility: hidden;
+    transform: translateZ(0) scale(1.0, 1.0) translate3d(0,0,0);
+} 
+
+.search-area{
+    width:100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 25%;
+    padding-right: 20%;
+} 

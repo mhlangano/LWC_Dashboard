@@ -1,15 +1,36 @@
 <template>
-        <lightning-card title="Search Account" icon-name="custom-custom57">
-            <div class="slds-m-around_medium">
-                <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small" label="Search">
-    
-                </lightning-input>
-    
-                <template if:true={accounts}>
-                        <template for:each={accounts} for:item="acc">
-               
-                        </template>
-                </template>
-            </div>
+
+        <lightning-card >
+           <div class="slds-m-around_medium">
+               <lightning-input type="search" onclick={populateDashboard} onchange={handleKeyChange} class="slds-m-bottom_small" label="Search" value={searchKey}></lightning-input>           
+           </div> 
+        </lightning-card><br/>
+        <lightning-card >
+           <div class="slds-m-around_medium">
+           <lightning-tabset>
+               <lightning-tab label="Profile">
+                   <c-dive-profile profile-data={data}></c-dive-profile>
+               </lightning-tab>
+               <lightning-tab label="Debit orders">
+                     This data: {data}
+               </lightning-tab>
+               <lightning-tab label="Recent transactions">
+                   
+               </lightning-tab>
+               <lightning-tab label="IIP">
+                   
+               </lightning-tab>  
+               <lightning-tab label="Call history">
+                   
+               </lightning-tab>
+               <lightning-tab label="Sim hold">
+                   
+               </lightning-tab> 
+               <lightning-tab label="Notes">
+                   
+               </lightning-tab>                                 
+           </lightning-tabset>        
+           </div>    
         </lightning-card>
-</template>
+       
+       </template> 

@@ -7,6 +7,9 @@
             ],
             "c/diveProfile": [
                 "diveProfile/diveProfile.js"
+            ],
+            "c/diveDebitOrders": [
+                "diveDebitOrders/diveDebitOrders.js"
             ]
         },
         "experimentalDecorators": true
