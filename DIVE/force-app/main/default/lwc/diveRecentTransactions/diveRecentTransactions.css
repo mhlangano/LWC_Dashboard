@@ -1,0 +1,147 @@
+p {
+    color: #808080;
+    font-size: 20px;
+    text-align: center;
+  }
+  .loading:after {
+    content: ' .';
+    animation: dots 1s steps(5, end) infinite;
+  }
+  
+  @keyframes dots {
+    0%, 20% {
+      color: rgba(255,255,255,1);  
+      text-shadow:
+        .25em 0 0 rgba(0,0,0,0),
+        .5em 0 0 rgba(0,0,0,0);}
+    40% {
+      color: grey;
+      text-shadow:
+        .25em 0 0 rgba(0,0,0,0),
+        .5em 0 0 rgba(0,0,0,0);}
+    60% {
+      text-shadow:
+        .25em 0 0 grey,
+        .5em 0 0 rgba(0,0,0,0);}
+    80%, 100% {
+      text-shadow:
+        .25em 0 0 grey,
+        .5em 0 0 grey;}
+  }
+  
+  .large-padding{
+    border: 5px solid purple;
+  }
+  .slds-table thead th {
+   text-decoration:none;
+   color: #942b49;
+   padding: .25rem .5rem;
+   font-weight: 700;
+   line-height: normal;
+   background:white;
+  }
+   
+  .slds-table--cell-buffer tr>th:first-child {
+      padding-left: 2rem;
+  }     
+  .slds-table--cell-buffer tr>td:first-child {
+      padding-left: 0.1rem;
+  }     
+     
+  .bground{
+       background-color:#F5F5F5;
+  } 
+  
+  .row-hover-class:hover {
+   background-color:#F5F5F5;
+  }
+  .heading-class {
+    color: #942b49;
+  }
+  .text-class {
+    color: #942b49;
+  }
+  .paragraph-class{
+    display: inline-block;
+      background-color:red;
+  }
+  
+  .word-break{
+    overflow-wrap: break-word;  
+  }
+  .spinner-cls {
+      border-radius: 5px;    
+  }
+  
+  .button_outline {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid rgb(221, 219, 218);
+      transition: border .15s linear;
+      border-color: rgb(221, 219, 218);
+      background-color: rgb(255, 255, 255);
+      border-color: rgba(148, 43, 75, 1);
+  }
+  .slds-button_outline-gray:disabled {
+      border-color: white;
+      background-color: #C8C8C8;
+      color: white;   
+  }
+  
+  .slds-button_outline-brand:disabled {
+      color: rgba(148, 43, 75, 1); 
+  }
+  
+  .reversed-do-color {
+   color: #acacac; 
+  }
+  
+  .reversed-do-success-text { 
+    color: #28a745; 
+    font-size: 13px; 
+  }
+  .dark-gray-color { 
+        color: #404040;
+      font-weight: 600;
+  }
+   .hide{
+      display:none;
+  }
+   .inline-block {
+      display: inline-block;
+      
+  }
+  
+  .circle_icon_plus{
+      background-image : url('/resource/1571840031000/DBS_Dashboard_Assets/DBS_Dashboard_Assets/Icons/circle_plus_icon.svg');
+      height: 15px;
+      width: 15px;
+      background-repeat: no-repeat; 
+      margin-right:2px;
+      margin-top:2px;  
+      
+  }
+  
+  .circle_icon_minus{ 
+      background-image : url('/resource/1571840031000/DBS_Dashboard_Assets/DBS_Dashboard_Assets/Icons/circle_minus_icon.svg'); 
+      height: 15px;
+      width: 15px;
+      background-repeat: no-repeat;
+      margin-right:2px;
+      margin-top:2px;
+      background-color:transparent;
+  }
+  
+  .parent-class{
+      border-top-right-radius:7px;
+      border-top-left-radius:7px;
+  } 
+  
+  .last_expandable_row_class{ 
+      padding-bottom:15px;
+      border-bottom-right-radius:7px;
+      border-bottom-left-radius:7px;
+      background-color:#F5F5F5;
+  }

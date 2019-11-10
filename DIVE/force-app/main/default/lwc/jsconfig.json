@@ -5,11 +5,29 @@
             "c/diveDashboard": [
                 "diveDashboard/diveDashboard.js"
             ],
+            "c/diveDebitOrders": [
+                "diveDebitOrders/diveDebitOrders.js"
+            ],
             "c/diveProfile": [
                 "diveProfile/diveProfile.js"
             ],
-            "c/diveDebitOrders": [
-                "diveDebitOrders/diveDebitOrders.js"
+            "c/diveSimHolds": [
+                "diveSimHolds/diveSimHolds.js"
+            ],
+            "c/diveCallHistory": [
+                "diveCallHistory/diveCallHistory.js"
+            ],
+            "c/diveIipHolds": [
+                "diveIipHolds/diveIipHolds.js"
+            ],
+            "c/diveRecentTransactions": [
+                "diveRecentTransactions/diveRecentTransactions.js"
+            ],
+            "c/diveNotes": [
+                "diveNotes/diveNotes.js"
+            ],
+            "c/diveUtilities": [
+                "diveUtilities/diveUtilities.js"
             ]
         },
         "experimentalDecorators": true

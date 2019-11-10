@@ -1,3 +1,59 @@
 <template>
-    
+        <div class=" slds-p-top_medium">
+                <div class="slds-grid">
+                  <div class="slds-size--1-of-1 slds-large-size--3-of-4">
+                     <div class="slds">        
+                        <table class="slds-table--cell-buffer slds-max-medium-table--stacked-horizontal">
+                           <thead>                     
+                              <tr class="table-header slds-m-bottom_large">    
+                                 <th scope="col" class="slds-size_1-of-6">
+                                     <div>Date</div>
+                                 </th> 
+                                 <th scope="col" class="slds-size_2-of-6">
+                                     <div>Name</div>
+                                 </th>
+                                 <th scope="col" class="slds-size_1-of-6">
+                                     <div>Amount</div>
+                                 </th>
+                                 <th scope="col" class="slds-size_1-of-6">
+                                     <div>Type</div>
+                                 </th>
+                                  <th scope="col" class="slds-size_1-of-6">
+                                     <div>UserSeq</div>
+                                 </th>
+                                                
+                              </tr>
+                           </thead>
+                           <tbody>                        
+                              <template if:true={debitsObj}>
+                                    <template for:each={debitsObj} for:item="row" for:index='index'>
+                                       <tr key={row.key}  class={row.value.debit_order_transaction_class}> 
+                                             <td class="slds-size_1-of-6 ">    
+                                                  <div> {row.value.action_date}</div> 
+                                             </td>  
+                                             <td class="slds-size_2-of-6 slds-p-right_x-large">
+                                                   <div class="word-break">{row.value.external_user_reference}</div> 
+                                                </td>
+                                                <td class="slds-size_1-of-6">
+                                                   <div>R{row.value.amount}</div>
+                                                </td>
+                                                <td class="slds-size_1-of-6">
+                                                   <div>{row.value.type}</div> 
+                                                </td> 
+                                                 <td class="slds-size_1-of-6">
+                                                   <div>{row.value.external_user_seq}</div>
+                                                </td>  
+                                                <td class="slds-size_1-of-6">
+ 
+                                                </td>                                           
+                                       </tr>
+                                    </template>
+                              </template>	
+                           </tbody>
+                        </table>
+            
+                     </div>
+                  </div>
+               </div>
+            </div>    
 </template>

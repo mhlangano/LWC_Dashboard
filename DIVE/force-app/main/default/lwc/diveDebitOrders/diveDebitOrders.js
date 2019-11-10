@@ -1,3 +1,5 @@
-import { LightningElement } from 'lwc';
+import { LightningElement,api } from 'lwc';
 
-export default class diveDebitOrders extends LightningElement {}
+export default class diveDebitOrders extends LightningElement {
+    @api debitsObj;  
+} 

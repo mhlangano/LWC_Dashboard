@@ -1,0 +1,46 @@
+<template>
+        <div class="slds-p-top_medium">
+                <div class="slds-grid">
+                   <div class="slds-size--1-of-1 slds-large-size--1-of-3">
+                      <div class="slds">        
+                         <table class="slds-table--cell-buffer slds-max-medium-table--stacked-horizontal">
+                            <thead>
+                               <tr class="slds-grid slds-wrap apply-text-color slds-p-bottom_medium">
+                                  <th class="slds-size_1-of-4">
+                                      <div>User</div>
+                                  </th>
+                                  <th class="slds-size_1-of-4">
+                                      <div>Cell</div>
+                                  </th>
+                                  <th class="slds-size_2-of-4">
+                                      <div>On hold</div>
+                                  </th>                       
+                               </tr>
+                            </thead>
+                            <tbody>                      
+                   
+                            <template if:true={simHolds}>
+                                <template for:each={simHolds} for:item="row" for:index='index'>
+                                    <tr key={row.key} class="slds-grid slds-wrap row-hover-class slds-p-top_medium slds-p-bottom_medium">                               
+                                        <td class="slds-size_1-of-4 slds-p-top_x-small">{row.value.user_number}</td>   
+                                        <td class="slds-size_1-of-4 slds-p-top_x-small">{row.value.sim_hold_number} </td>                                     
+                                        <td class="slds-size_2-of-4">
+                                            <div class="slds-grid slds-wrap">
+                                                <div class="slds-col slds-size_1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3 slds-p-top_x-small">
+                                                        <span>{row.value.sim_hold_status}</span>
+                                                </div>                                             
+                                            </div>
+                                        </td>
+                                    </tr>                                 
+                                </template>      
+                            </template>
+                            </tbody>
+                         </table>                              
+                         <template if:false={simHolds}>
+                             <div class="slds-align_absolute-center slds-p-around_xx-small slds-size--1-of-1">No sim holds found</div>  
+                         </template>                  
+                      </div>
+                   </div>
+                </div>
+             </div>     
+</template>

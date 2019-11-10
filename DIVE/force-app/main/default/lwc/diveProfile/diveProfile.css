@@ -1,0 +1,237 @@
+.box-top {
+    padding-top : 15px;
+    padding-left :18px;
+    padding-right:18px;
+    border: 0px;
+    background-color:rgb(243, 242, 242);
+    border-top-right-radius : 8px;
+    border-top-left-radius : 8px;
+}
+.box-middle {
+    padding-left :18px;
+    padding-right:18px;
+    border: 0px;
+    background-color:rgb(243, 242, 242);
+}
+.light-bold{
+    font-weight: 700;
+}
+.strong-bold{
+    font-weight: 900; 
+    font-size:15px;
+    color: black;
+}
+.box-bottom {
+    padding-left :18px;
+    padding-right:18px;
+    border: 0px;
+    background-color:rgb(243, 242, 242);
+    border-bottom-right-radius : 8px;
+    border-bottom-left-radius : 8px; 
+} 
+.box {
+    padding-left :18px;
+    padding-right:18px;
+    border: 0px;
+} 
+
+.aol-status-cls:focus {
+    background-color:red; 
+}
+.login-cls,
+.aol-status-cls:hover {
+    cursor: pointer;
+    color: white; 
+    font-weight: normal; 
+    border-radius: 4px;
+    border: 1px;
+	padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 20px;
+    padding-right: 20px;  
+    text-align: center;
+	background-color: rgb(0, 112, 210);            
+}
+
+.login-cls:disabled {
+    background-color: #C8C8C8;         
+}        
+.aol-status-cls:hover span {
+    display:none
+}
+.aol-status-cls:hover:before {
+    content:"View debit info"
+} 
+
+div:focus {
+    outline: none;
+} 
+.copy-to-clipboard-cls::selection {   
+   color: white; 
+   outline: none;
+}
+.copy-to-clipboard-cls{
+  	border: 1px solid transparent;
+    text-align: right;    
+}
+.THIS .copy-to-clipboard-cls:hover  {
+    cursor: pointer;
+    color: white; 
+    font-weight: normal; 
+    border-radius: 4px;
+    border: 1px;
+    padding: 2px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+	background-color: rgb(0, 112, 210);            
+}    
+ .copy-to-clipboard-cls:active {
+    background-color: rgba(118, 0, 47, 1);	
+    outline: none;                    
+}  
+.tooltip-idNum,               
+.tooltip-accNum,
+.tooltip-cccode,
+.tooltip-comcard,
+.tooltip-cellnum{
+  position: relative;
+  display: inline-block;
+}
+.tooltip-idNum .tooltiptext,                      
+.tooltip-accNum .tooltiptext,
+.tooltip-cccode .tooltiptext,
+.tooltip-comcard .tooltiptext,
+.tooltip-cellnum .tooltiptext{
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-idNum .tooltiptext::after,  
+.tooltip-accNum .tooltiptext::after,
+.tooltip-cccode .tooltiptext::after,
+.tooltip-comcard .tooltiptext::after,
+.tooltip-cellnum .tooltiptext::after{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.tooltip-idNum[display-tooltip='true'] .tooltiptext, 
+.tooltip-accNum[display-tooltip='true'] .tooltiptext,
+.tooltip-cccode[display-tooltip='true'] .tooltiptext,
+.tooltip-comcard[display-tooltip='true'] .tooltiptext,
+.tooltip-cellnum[display-tooltip='true'] .tooltiptext{
+  visibility: visible;
+  opacity: 1;
+}                
+.button-brand:hover{
+    
+	border-radius: 4px;
+    background: rgba(175, 20, 75, 1);
+    border: 1px solid rgba(175, 20, 75, 1);    
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    background-color:orange; 
+    font-weight:normal;
+    float: right;
+
+	padding-top: 3px;
+    padding-bottom: 3px;                 
+	background-color: rgb(0, 112, 210);
+    border-color: rgb(0, 112, 210);
+    color: rgb(255, 255, 255);                           
+}
+                        
+.button-brand:active{
+    background-color: rgba(118, 0, 47, 1);	
+  
+}                            
+     
+
+.greyout-cls{
+    color: #A9A9A9;
+}
+
+.custom-box {
+    text-align: left;
+    padding: 1rem;
+}
+
+h1.header-class{
+    font-weight:bold; 
+    text-decoration:none;
+    color:#942b49;
+    font-size:15px;    
+}
+
+.text-output{   
+    height:20px; 
+    width:100%;    
+}
+.word-break{
+    overflow-wrap: break-word;  
+  line-height: 80%;      
+}
+
+.success-icon {
+    border-radius: 50%;
+    width: 20px;
+    height: 15px;
+    background: white;
+    border: 1px solid rgb(2, 126, 70); 
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    color: rgb(2, 126, 70);
+    font-size: 10px;
+}
+
+.error-icon {
+  border-radius: 50%;
+    width: 20px;
+    height: 15px; 
+    background: white;
+    border: 1px solid rgb(194, 57, 52);
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    color: rgb(194, 57, 52);
+    font-size: 10px; 
+}
+
+@media all and (min-width: 1024px) {
+    .large-text-align {
+        text-align: right;
+    }
+    .large-padding {
+        padding-right : 24px; 
+        padding-left: 24px;
+       
+    }
+}
+  
+@media all and (max-width: 1023px) {
+    .medium-border {
+        border: 1px solid lightgrey;
+    }
+    .medium-text-align{
+        text-align: left;                                              
+	}	
+}

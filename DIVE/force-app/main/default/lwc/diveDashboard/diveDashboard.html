@@ -1,5 +1,4 @@
 <template>
-
         <lightning-card >
            <div class="slds-m-around_medium">
                <lightning-input type="search" onclick={populateDashboard} onchange={handleKeyChange} class="slds-m-bottom_small" label="Search" value={searchKey}></lightning-input>           
@@ -9,28 +8,26 @@
            <div class="slds-m-around_medium">
            <lightning-tabset>
                <lightning-tab label="Profile">
-                   <c-dive-profile profile-data={data}></c-dive-profile>
-               </lightning-tab>
-               <lightning-tab label="Debit orders">
-                     This data: {data}
+                   <c-dive-profile profile-obj={profileData}></c-dive-profile>
+               </lightning-tab> 
+               <lightning-tab label="Debit orders">         
+                    <c-dive-debit-orders debits-obj={debitOrders}></c-dive-debit-orders>
                </lightning-tab>
                <lightning-tab label="Recent transactions">
-                   
+                   <c-dive-recent-transactions recent-transactions={recentTransactions}></c-dive-recent-transactions>
                </lightning-tab>
                <lightning-tab label="IIP">
-                   
-               </lightning-tab>  
+                    <c-dive-iip-holds iip-holds={iipHolds}></c-dive-iip-holds> 
+               </lightning-tab> 
                <lightning-tab label="Call history">
-                   
+                   <c-dive-call-history call-history={callHistory}></c-dive-call-history>             
                </lightning-tab>
                <lightning-tab label="Sim hold">
-                   
+                   <c-dive-sim-holds sim-holds={simHolds}></c-dive-sim-holds>
                </lightning-tab> 
-               <lightning-tab label="Notes">
-                   
+               <lightning-tab label="Notes">                    
                </lightning-tab>                                 
            </lightning-tabset>        
            </div>    
-        </lightning-card>
-       
-       </template> 
+        </lightning-card>       
+</template> 

@@ -1,0 +1,86 @@
+.large-padding{
+    border: 5px solid purple;
+  }
+  
+  .slds-button_neutral, .slds-button--neutral {
+   padding-left: 1rem;
+   padding-right: 1rem;
+   text-align: center;
+   vertical-align: middle;
+   border: 1px solid rgb(221, 219, 218);
+   transition: border .15s linear;
+   border-color: rgba(148, 43, 75, 1);
+   background-color: rgb(255, 255, 255);
+  }
+   
+  .table-header {
+    text-decoration:none;
+    color: #942b49;
+    padding: .25rem .5rem;
+    font-weight: 700;
+    line-height: normal;
+    background:white;
+  }
+  
+  .slds-table--cell-buffer tr>td:first-child,
+  .slds-table--cell-buffer tr>th:first-child {
+      padding-left: 0.75rem;
+  }     
+  
+  .apply-text-color {
+    color: rgba(175, 20, 75, 1);
+  }
+  
+  .row-hover-class:hover {
+   background-color:#F5F5F5;
+  }
+ .heading-class {
+    color: #942b49;
+  }
+  .text-class {
+    color: #942b49;
+  }
+.paragraph-class{
+    display: inline-block;
+  }
+  
+.word-break{
+    overflow-wrap: break-word;  
+  }
+.spinner-cls {
+      border-radius: 5px;    
+  }
+  
+.button_outline {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid rgb(221, 219, 218);
+      transition: border .15s linear;
+      border-color: rgb(221, 219, 218);
+      background-color: rgb(255, 255, 255);
+      border-color: rgba(148, 43, 75, 1);
+  }
+.slds-button_outline-gray:disabled {
+      border-color: white;
+      background-color: #C8C8C8;
+      color: white;   
+  }
+  
+.slds-button_outline-brand:disabled {
+      color: rgba(148, 43, 75, 1); 
+  }
+  
+.reversed-do-color {
+   color: #acacac; 
+  }
+  
+.reversed-do-success-text { 
+    color: #28a745; 
+    font-size: 13px; 
+  }
+.dark-gray-color { 
+        color: #404040;
+      font-weight: 600;
+  }

@@ -1,0 +1,48 @@
+<template>
+    <div class="slds-p-left_xx-small slds-p-top_x-small">
+        <div class="slds-grid">
+            <div class="slds-size--1-of-1 slds-large-size--1-of-1">
+
+                <table class="slds-table--cell-buffer slds-max-medium-table--stacked-horizontal">
+                    <thead>
+                          <tr class="text-class slds-p-bottom_large">
+                            <th scope="col" class="slds-size_1-of-7">Date</th>
+                            <th scope="col" class="slds-size_1-of-7">Time</th>
+                            <th scope="col" class="slds-size_1-of-7">Amount</th>
+                            <th scope="col" class="slds-size_1-of-7">Channel</th>
+                            <th scope="col" class="slds-size_1-of-7">Reference</th>
+                            <th scope="col" class="slds-size_2-of-7">Description</th>
+                        </tr>
+                    </thead> 
+                    <tbody>
+                        <template if:true={recentTransactions}>
+                            <template for:each={recentTransactions} for:item="row">
+                                <tr key={row.key}>
+                                    <td class="slds-size_1-of-7">
+                                        <div class="slds-grid">
+                                            <div class={row.icon_class} style="margin-left:6px;"></div>
+                                            <div style="padding-left:7px;">{row.trans_date}</div>
+                                        </div>
+                                    </td>
+                                    <td class="slds-size_1-of-7">{row.trans_time}</td>
+                                    <td class="slds-size_1-of-7">{row.trans_amount}</td>
+                                    <td class="slds-size_1-of-7">{row.trans_channel}</td>
+                                    <td class="slds-size_1-of-7">{row.trans_reference}</td>
+                                    <td class="slds-size_2-of-7">
+                                        <lightning-formatted-rich-text value={row.trans_description}>
+                                        </lightning-formatted-rich-text>
+                                    </td>
+                                </tr>
+                            </template>
+                        </template>
+
+                    </tbody>
+                </table>
+                <template if:false={recentTransactions}>
+                    <div class="slds-align_absolute-center slds-p-around_xx-small slds-size--3-of-4">No transactions
+                        found</div>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>
