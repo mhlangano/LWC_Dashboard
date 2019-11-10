@@ -1,9 +1,9 @@
 import { LightningElement, track } from 'lwc';
-import {convertToValidDate,getDate} from 'c/diveUtilities';
+import {convertToValidDate,getDate,formattedTime} from 'c/diveUtilities';
  
 // import apex class and it's methods. 
 import getDataFromObject from '@salesforce/apex/dive_Populate_Controller.getDataFromObject'
-
+ 
 export default class dive_Populate_Controller extends LightningElement {
     @track searchKey;
     @track profileData = {
@@ -20,10 +20,15 @@ export default class dive_Populate_Controller extends LightningElement {
     @track simHolds;
     @track error; // to show error message from apex controller.
     @track success; // to show succes message in ui.  
-
+    @track showProfileSpinner = false;
+ 
     handleKeyChange(event) {
         this.searchKey = event.target.value;
     }
+    //Post queue to DB
+    postQueueItem() { 
+        this.showProfileSpinner = true;
+    } 
     // method for get  accounts.
     populateDashboard() {
         if (!this.searchKey) {
@@ -66,14 +71,13 @@ export default class dive_Populate_Controller extends LightningElement {
                 for (let key in recent_transactions) {
                     if (key) {
                         let record = recent_transactions[key];
-
                         set_recent_trans.push({
                             "key": key,
                             "relationship": "parent",
                             "row_class": "",
                             "icon_class": "circle_icon_plus",
-                            "trans_date": record.date,
-                            "trans_time": record.time,
+                            "trans_date": getDate(new Date(record.date)), 
+                            "trans_time": formattedTime(record.time),
                             "trans_amount": record.requested_amount,
                             "trans_channel": record.payment_channel,
                             "trans_reference": record.reference_number,

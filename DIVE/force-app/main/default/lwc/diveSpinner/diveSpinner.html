@@ -1,0 +1,16 @@
+<template>
+
+    <template if:true={isLoaded}>
+        <div class="slds-spinner_container">
+            <section>
+                <div class="slds-modal__container " style="width:22%;text-align:center;">
+                    <div class="slds-modal__content slds-p-bottom_large slds-p-top_small">
+                        <img src={spinnerImage} style="width:100px;">
+                     
+                        <div class="slds-p-top_x-small format-action-text">{message}</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </template>
+</template>

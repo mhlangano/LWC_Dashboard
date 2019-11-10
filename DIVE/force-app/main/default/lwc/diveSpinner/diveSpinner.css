@@ -1,0 +1,12 @@
+.slds-modal__content {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.format-action-text {
+    font-size: 20px;
+    color:black;
+}
+.slds-modal__container{
+    padding-top: 100px;
+}

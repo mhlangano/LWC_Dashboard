@@ -1,59 +1,101 @@
 <template>
-    <lightning-layout multiple-rows="true" vertical-align="stretch" horizontal-align="spread" class="slds-border_top slds-border_bottom slds-border_left slds-border_right">
-        <lightning-layout-item padding="around-medium" flexibility="grow" size="12" small-device-size="12" medium-device-size="5" large-device-size="5"  class="large-padding">
-     
-                <lightning-layout horizontal-align="spread" multiple-rows="true" class="slds-p-bottom_medium">
-                    <lightning-layout-item flexibility="grow" size="12" medium-device-size="12" large-device-size="12">
-                        <h1 class="header-class">Client information</h1>
-                    </lightning-layout-item >
-                </lightning-layout>   
+    <lightning-layout multiple-rows="true" vertical-align="stretch" horizontal-align="spread"
+        class="slds-border_top slds-border_bottom slds-border_left slds-border_right">
+        <lightning-layout-item padding="around-medium" flexibility="grow" size="12" small-device-size="12"
+            medium-device-size="5" large-device-size="5" class="large-padding">
+
+            <lightning-layout horizontal-align="spread" multiple-rows="true" class="slds-p-bottom_medium">
+                <lightning-layout-item flexibility="grow" size="12" medium-device-size="12" large-device-size="12">
+                    <h1 class="header-class">Client information</h1>
+                </lightning-layout-item>
+            </lightning-layout>
 
 
-                <lightning-layout horizontal-align="spread" multiple-rows="true" class="slds-p-bottom_small">
-                    <lightning-layout-item flexibility="grow" size="12" medium-mevice-size="12" large-device-size="6">
-                        <div class="">Title and full name:</div>
-                    </lightning-layout-item>
-                    <lightning-layout-item flexibility="grow" size="12" medium-device-size="12" large-device-size="6" > 
-                        <div class="slds-text-title_bold large-text-align text-output">{profileObj.cust_title}&nbsp;{profileObj.cust_name}&nbsp;{profileObj.cust_surname}</div>  
-                    </lightning-layout-item>
-                </lightning-layout>    
-                
-                <lightning-layout horizontal-align="spread" multiple-rows="true" class="slds-p-bottom_small">
-                    <lightning-layout-item flexibility="grow" size="12" medium-device-size="12" large-device-size="6"><div id="idNum" tabindex="0" class={profileObj.cust_id_cls}>ID number:</div></lightning-layout-item>
-                    <lightning-layout-item flexibility="grow" size="12" medium-device-size="12" large-device-size="6" class="slds-text-title_bold large-text-align">
-                        <div class="large-text-align text-output">  
-                                <template if:true={profileObj.cust_id}>
-                                <div class="tooltip-idNum" onmouseout={removeToolTip} id="idNum-Div">
-                                    <input id="id_number" value={profileObj.cust_id} class="slds-grid_align-end copy-to-clipboard-cls medium-text-align" onclick={copyToClipboardHandler}/>
-                                    <span class="tooltiptext">copied</span> 
-                                </div> 
-                            </template >
-                        </div>
-                    </lightning-layout-item>  
-                </lightning-layout>                
-                
-                <lightning-layout horizontal-align="spread" multiple-rows="true" class="slds-p-bottom_small">
-                    <lightning-layout-item flexibility="grow" size="12" medium-device-size="12" large-device-size="6"><div id="accNum" tabindex="0" class={profileObj.access_account_number_cls}>Access account number:</div></lightning-layout-item>
-                    
-                    <lightning-layout-item flexibility="grow" size="12" medium-device-dize="12" large-device-size="6" class="slds-text-title_bold large-text-align">
-                        <div class="large-text-align text-output" >       
-                                <template if:true={profileObj.Access_Account_Number__c}>                 
-                  
-                                <div class="tooltip-accNum" onmouseout={removeToolTip} id="accNum-Div">
-                                    <input id="access_account_number" value={profileObj.Access_Account_Number__c} class="slds-grid_align-end copy-to-clipboard-cls medium-text-align" onclick={copyToClipboardHandler}/>
-                                    <span class="tooltiptext">copied</span>   
-                                </div>
-                            </template>
-                        </div>
-                    </lightning-layout-item>                
-                </lightning-layout>
+            <lightning-layout horizontal-align="spread" multiple-rows="true" class="slds-p-bottom_small">
+                <lightning-layout-item flexibility="grow" size="12" medium-mevice-size="12" large-device-size="6">
+                    <div class="">Title and full name:</div>
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="grow" size="12" medium-device-size="12" large-device-size="6">
+                    <div class="slds-text-title_bold large-text-align text-output">
+                        {profileObj.cust_title}&nbsp;{profileObj.cust_name}&nbsp;{profileObj.cust_surname}</div>
+                </lightning-layout-item>
+            </lightning-layout>
+
+            <lightning-layout horizontal-align="spread" multiple-rows="true" class="slds-p-bottom_small">
+                <lightning-layout-item flexibility="grow" size="12" medium-device-size="12" large-device-size="6">
+                    <div id="idNum" tabindex="0" class={profileObj.cust_id_cls}>ID number:</div>
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="grow" size="12" medium-device-size="12" large-device-size="6"
+                    class="slds-text-title_bold large-text-align">
+                    <div class="large-text-align text-output">
+                        <template if:true={profileObj.cust_id}>
+                            <div class="tooltip-idNum" onmouseout={removeToolTip} id="idNum-Div">
+                                <input id="id_number" value={profileObj.cust_id}
+                                    class="slds-grid_align-end copy-to-clipboard-cls medium-text-align"
+                                    onclick={copyToClipboardHandler} />
+                                <span class="tooltiptext">copied</span>
+                            </div>
+                        </template>
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+
+            <lightning-layout horizontal-align="spread" multiple-rows="true" class="slds-p-bottom_small">
+                <lightning-layout-item flexibility="grow" size="12" medium-device-size="12" large-device-size="6">
+                    <div id="accNum" tabindex="0" class={profileObj.access_account_number_cls}>Access account number:
+                    </div>
+                </lightning-layout-item>
+
+                <lightning-layout-item flexibility="grow" size="12" medium-device-dize="12" large-device-size="6"
+                    class="slds-text-title_bold large-text-align">
+                    <div class="large-text-align text-output">
+                        <template if:true={profileObj.Access_Account_Number__c}>
+
+                            <div class="tooltip-accNum" onmouseout={removeToolTip} id="accNum-Div">
+                                <input id="access_account_number" value={profileObj.Access_Account_Number__c}
+                                    class="slds-grid_align-end copy-to-clipboard-cls medium-text-align"
+                                    onclick={copyToClipboardHandler} />
+                                <span class="tooltiptext">copied</span>
+                            </div>
+                        </template>
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
 
         </lightning-layout-item>
-        <lightning-layout-item padding="around-medium" flexibility="grow" size="12" small-device-size="12" medium-device-size="4" large-device-size="4" class="slds-border_left slds-border_right medium-border large-padding" >
-                <!-- Internet banking service section -->
+        <lightning-layout-item padding="around-medium" flexibility="grow" size="12" small-device-size="12"
+            medium-device-size="4" large-device-size="4"
+            class="slds-border_left slds-border_right medium-border large-padding">
+            <!-- Internet banking service section -->
+            <lightning-layout horizontal-align="spread" multiple-rows="true" class="slds-p-bottom_medium">
+                <lightning-layout-item flexibility="grow" size="12" medium-device-size="12" large-device-size="12">
+                    <h1 class="header-class">Internet banking service</h1>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout horizontal-align="spread" multiple-rows="true" class="slds-p-bottom_small">
+                <lightning-layout-item flexibility="grow" size="12" medium-device-size="12" large-device-size="6">
+                    <div class={profileObj.service_status_cls}>AOL status:</div>
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="grow" size="12" medium-device-size="12" large-device-size="6"
+                    class="large-text-align slds-grid slds-grid_align-end">
+                    <div class="slds-col">
+                        <div class={profileObj.aol_status_class}> {profileObj.service_status} </div>
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+
         </lightning-layout-item>
-        <lightning-layout-item padding="around-medium" flexibility="grow" size="12" small-device-size="12" medium-device-size="3" large-device-size="3" class="large-padding">
-         
-        </lightning-layout-item>        
+        <lightning-layout-item padding="around-medium" flexibility="grow" size="12" small-device-size="12"
+            medium-device-size="3" large-device-size="3" class="large-padding">
+            <lightning-layout flexibility="grow" size="12" small-device-size="12" medium-device-size="3"
+                large-device-size="3" class="large-padding">
+                <lightning-layout-item flexibility="grow" size="12" medium-device-size="12" large-device-size="12">
+                    <h1 class="header-class">Registered channels</h1>
+                </lightning-layout-item>
+            </lightning-layout>
+
+  
+        </lightning-layout-item>
     </lightning-layout>
-</template>  
+    <c-dive-spinner message="Profile loading ..." is-loaded={showProfileSpinner}></c-dive-spinner>
+</template> 

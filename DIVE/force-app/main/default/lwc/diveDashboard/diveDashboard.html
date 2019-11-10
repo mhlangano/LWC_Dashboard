@@ -1,14 +1,14 @@
 <template>
         <lightning-card >
            <div class="slds-m-around_medium">
-               <lightning-input type="search" onclick={populateDashboard} onchange={handleKeyChange} class="slds-m-bottom_small" label="Search" value={searchKey}></lightning-input>           
+               <lightning-input type="search" onclick={postQueueItem} onchange={handleKeyChange} class="slds-m-bottom_small" label="Search" value={searchKey}></lightning-input>           
            </div> 
         </lightning-card><br/>
         <lightning-card >
            <div class="slds-m-around_medium">
            <lightning-tabset>
                <lightning-tab label="Profile">
-                   <c-dive-profile profile-obj={profileData}></c-dive-profile>
+                   <c-dive-profile profile-obj={profileData} show-profile-spinner={showProfileSpinner} ></c-dive-profile>
                </lightning-tab> 
                <lightning-tab label="Debit orders">         
                     <c-dive-debit-orders debits-obj={debitOrders}></c-dive-debit-orders>
